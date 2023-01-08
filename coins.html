@@ -9,9 +9,6 @@ body {
     background-size: contain;
     background-position: right;
 }
-.nowrap {
-    overflow-wrap: break-word;
-}
 #maindiv {
     white-space: pre-wrap;
     font-family: "Courier New", monospace;
@@ -30,7 +27,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
         const element = data[i]
         if (coins.includes(element.id.toLowerCase()) || coins.includes(element.symbol.toLowerCase()) || coins.includes(element.name.toLowerCase()))
         {
-            echo += element.symbol + '(' + element.current_price + ', ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%); '
+            echo += element.symbol + '(' + element.current_price + ', ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%)\n'
         }
     }
     console.log(echo)
@@ -38,7 +35,6 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
 })
 </script>
 </head>
-<body id="maindiv" class="nowrap">
-<h1>Coins:</h1>
-</body>
+<body id="maindiv">
+<h1>Coins:</h1></body>
 </html>
