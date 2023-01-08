@@ -31,10 +31,10 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
         }
     }
     console.log(echo)
-    document.body.append(echo)
+    document.body.innerHTML = "\n<h1>Coins:</h1>\n" + echo
 })
 </script>
 </head>
 <body id="maindiv">
-<h1>Coins:</h1></body>
+</body>
 </html>
