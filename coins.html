@@ -31,10 +31,31 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
         }
     }
     console.log(echo)
-    document.body.innerHTML = "\n<h1>Coins:</h1>\n" + echo
+    document.body.innerHTML = "\n<h1>Coins:</h1>\n" + echo + document.body.innerHTML
 })
 </script>
 </head>
 <body id="maindiv">
+<script src="js/live2d-widget/lib/L2Dwidget.min.js" type="text/javascript"></script>
+<script>
+L2Dwidget.init({
+    "pluginRootPath": "live2d-widget/",
+    "pluginJsPath": "lib/",
+    "pluginModelPath": "assets/",
+    "tagMode": false,
+    "debug": true, "model": {
+    "jsonPath": "js/live2d-widget/assets/mikoto.model.json"
+    },
+    "display": {
+    "position": "left",
+    "width":200,
+    "height":400
+    },
+    "mobile": {
+    "show": true
+    },
+    "log": false
+});
+</script>
 </body>
 </html>
