@@ -30,7 +30,6 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
             echo += element.symbol + '(' + element.current_price + ', ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%)\n'
         }
     }
-    console.log(echo)
     document.body.innerHTML = "\n<h1>Coins:</h1>\n" + echo + document.body.innerHTML
 })
 </script>
