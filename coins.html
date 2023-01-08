@@ -1,5 +1,25 @@
 <html>
 <head>
+<style>
+body {
+    top, left: 0px;
+    background-color: black;
+    background-image: url("donate.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+.nowrap {
+    overflow-wrap: break-word;
+}
+#maindiv {
+    white-space: pre-wrap;
+    font-family: "Courier New", monospace;
+    text-shadow: 1px 1px #000000;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+</style>
 <script>
 const coins = ["btc", "eth", "doge", "xmr", "bnb", "matic"]
 echo = ""
@@ -18,4 +38,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
 })
 </script>
 </head>
+<body>
+<h1>Coins:</h1>
+</body>
 </html>
