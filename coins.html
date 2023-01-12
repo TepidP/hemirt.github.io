@@ -16,7 +16,24 @@ body {
     font-size: 25px;
     color: #FFFFFF;
 }
+footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+footer a:link, footer a:active, footer a:visited{ color: lightblue; }
+footer a:hover { color: rgb(144, 198, 216)}
+
 </style>
+<title>Coins</title>
+</head>
+<body id="maindiv">
+<div id="coins"></div>
+<footer>
+    <a href="/coins.html">Coins</a>
+    <a href="/">Donate Here</a>
+</footer>
 <script>
 const coins = ["btc", "eth", "doge", "xmr", "bnb", "matic"]
 echo = ""
@@ -30,11 +47,9 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
             echo += element.symbol + '(' + element.current_price + ', ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%)\n'
         }
     }
-    document.body.innerHTML = "\n<h1>Coins:</h1>\n" + echo + document.body.innerHTML
+    document.getElementById("coins").innerHTML = "<h1>Coins:</h1>\n" + echo
 })
 </script>
-</head>
-<body id="maindiv">
 <script src="js/live2d-widget/lib/L2Dwidget.min.js" type="text/javascript"></script>
 <script>
 L2Dwidget.init({
