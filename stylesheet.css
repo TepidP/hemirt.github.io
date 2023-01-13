@@ -1,0 +1,29 @@
+html {
+    height: 100%;
+}
+body {
+    top, left: 0px;
+    background-color: black;
+    background-image: url("donate.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+.nowrap {
+    overflow-wrap: break-word;
+}
+#maindiv {
+    white-space: pre-wrap;
+    font-family: "Courier New", monospace;
+    text-shadow: 1px 1px #000000;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+footer a:link, footer a:active, footer a:visited{ color: lightblue; }
+footer a:hover { color: rgb(144, 198, 216)}
