@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+body {
+    top, left: 0px;
+    background-color: black;
+    background-image: url("donate.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+#maindiv {
+    white-space: pre-wrap;
+    font-family: "Courier New", monospace;
+    text-shadow: 1px 1px #000000;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+footer a:link, footer a:active, footer a:visited{ color: lightblue; }
+footer a:hover { color: rgb(144, 198, 216)}
+
+</style>
+<title>Coins</title>
+</head>
+<body id="maindiv">
+<div id="donolist">
+  <h1>Dono List:</h1>
+  (2023-01-13) UBQT: 1.15066 BUSD
+</div>
+<footer>
+    <a href="donolist.html">Dono List</a>
+    <a href="/coins.html">Coins</a>
+    <a href="/">Donate Here</a>
+</footer>
+<script src="js/live2d-widget/lib/L2Dwidget.min.js" type="text/javascript"></script>
+<script>
+L2Dwidget.init({
+    "pluginRootPath": "live2d-widget/",
+    "pluginJsPath": "lib/",
+    "pluginModelPath": "assets/",
+    "tagMode": false,
+    "debug": true, "model": {
+    "jsonPath": "js/live2d-widget/assets/mikoto.model.json"
+    },
+    "display": {
+    "position": "left",
+    "width":200,
+    "height":400
+    },
+    "mobile": {
+    "show": true
+    },
+    "log": false
+});
+</script>
+</body>
+</html>
