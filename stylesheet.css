@@ -25,5 +25,5 @@ footer {
     text-align: center;
     width: 100%;
 }
-footer a:link, footer a:active, footer a:visited{ color: lightblue; }
-footer a:hover { color: rgb(144, 198, 216)}
+a:link, a:active, a:visited{ color: lightblue; }
+a:hover { color: rgb(144, 198, 216)}
