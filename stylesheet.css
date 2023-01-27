@@ -28,7 +28,9 @@ footer {
 #disclaimer {
     bottom: 0;
     position: fixed;
-    text-align: right;
+    font-size: small;
+    right: 1em;
+    display: flex;
 }
 a:link, a:active, a:visited{ color: lightblue; }
 a:hover { color: rgb(144, 198, 216)}
