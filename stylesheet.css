@@ -25,5 +25,10 @@ footer {
     text-align: center;
     width: 100%;
 }
+#disclaimer {
+    bottom: 0;
+    position: fixed;
+    text-align: right;
+}
 a:link, a:active, a:visited{ color: lightblue; }
 a:hover { color: rgb(144, 198, 216)}
