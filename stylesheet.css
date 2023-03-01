@@ -34,3 +34,8 @@ footer {
 }
 a:link, a:active, a:visited{ color: lightblue; }
 a:hover { color: rgb(144, 198, 216)}
+
+img {
+    vertical-align: middle;
+    width: 96px;
+}
