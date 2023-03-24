@@ -4,11 +4,13 @@
 <title>Coins</title>
 </head>
 <body id="maindiv">
+<h1>Coins:</h1>
 <div id="coins"></div>
 <footer>
-    <a href="donolist.html">Dono List</a>
-    <a href="/coins.html">Coins</a>
-    <a href="/">Donate Here</a>
+<a href="donolist.html">Dono List</a>
+<a href="/">Donate Here</a>
+<a href="/coins.html">Coins</a>
+<a href="/blog.html">Blog</a>
 </footer>
 <div id="disclaimer">
 <span>Data provided by <a href="https://www.coingecko.com/">CoinGecko</a></span>
@@ -25,7 +27,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
             echo += element.symbol + '(' + element.current_price + ', ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%)\n'
         }
     }
-    document.getElementById("coins").innerHTML = "<h1>Coins:</h1>\n" + echo
+    document.getElementById("coins").innerHTML = echo
 })
 </script>
 <script src="js/live2d-widget/lib/L2Dwidget.min.js" type="text/javascript"></script>

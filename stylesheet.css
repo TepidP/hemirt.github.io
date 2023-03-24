@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 body {
-    top, left: 0px;
+    /*top: 0px; left: 0px;*/
     background-color: black;
     background-image: url("donate.png");
     background-repeat: no-repeat;
@@ -25,6 +25,14 @@ body {
 /*#donolist::-webkit-scrollbar {
     display: none;
 }*/
+#blog {
+    text-align: justify;
+    width: 50%;
+    margin: 0 30% 0 15%;
+}
+.post {
+    white-space: pre-line;
+}
 #maindiv {
     white-space: pre-wrap;
     font-family: "Courier New", monospace;
