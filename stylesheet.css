@@ -12,6 +12,9 @@ body {
 .nowrap {
     overflow-wrap: break-word;
 }
+.text-dec-none {
+    text-decoration: none;
+}
 #maindiv {
     white-space: pre-wrap;
     font-family: "Courier New", monospace;
