@@ -15,6 +15,16 @@ body {
 .text-dec-none {
     text-decoration: none;
 }
+#donolist {
+    overflow-y: scroll;
+    height: 50%;
+
+    /*-ms-overflow-style: none;
+    scrollbar-width: none;*/
+}
+/*#donolist::-webkit-scrollbar {
+    display: none;
+}*/
 #maindiv {
     white-space: pre-wrap;
     font-family: "Courier New", monospace;
