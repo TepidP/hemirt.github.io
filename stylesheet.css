@@ -17,7 +17,7 @@ body {
 }
 #donolist {
     overflow-y: scroll;
-    height: 50%;
+    height: 65%;
 
     /*-ms-overflow-style: none;
     scrollbar-width: none;*/
