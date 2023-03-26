@@ -68,3 +68,8 @@ img {
 h1 {
     display: inline-block;
 }
+
+#live2d-widget {
+    position: fixed;
+    z-index: -1;
+}
