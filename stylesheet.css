@@ -93,4 +93,5 @@ h1 {
     border: 2px;
     border-style: solid;
     border-color: gray;
+    outline: none;
 }
