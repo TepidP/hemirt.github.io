@@ -10,6 +10,33 @@
 <body id="maindiv">
 <h1>Blog:</h1>
 <div id="blog">
+<span>Filter by: <input type="text" id="filter"></span>
+<script>
+    const posts = document.getElementsByClassName("post");
+    var filterInput = document.getElementById("filter");
+    filterInput.addEventListener('input', function(e) {
+        let text = e.target.value;
+        if (!text)
+        {
+            for (let i = 0; i < posts.length; ++i)
+            {
+                posts[i].style.display = null;
+            }
+            return;
+        }
+        for (let i = 0; i < posts.length; ++i)
+        {
+            if (posts[i].innerText.toLowerCase().includes(text.toLowerCase()))
+            {
+                posts[i].style.display = null;
+            }
+            else
+            {
+                posts[i].style.display = "none";
+            }
+        }
+    });
+</script>
 <p class="post">2023-03-29
 Coingecko seems to have fucked up something and now I can't access it via the <a href="/coins">Coins</a> page, neither via curl nor in my webbrowser. Hopefully fix soon Sadge</p>
 <p class="post">2023-03-29
