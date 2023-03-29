@@ -37,10 +37,10 @@ body {
     overflow-y: scroll;
     background-color: rgba(0,0,0,0.5);
     background-clip: content-box;
-    white-space: unset;
+    white-space: initial;
 }
 .post {
-    /*white-space: pre-line;*/
+    white-space: pre-line;
 }
 #maindiv {
     white-space: pre-wrap;
