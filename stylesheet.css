@@ -95,3 +95,25 @@ h1 {
     border-color: gray;
     outline: none;
 }
+
+rainbow-letters span:nth-child(10n + 1) {
+    color:red;
+}
+rainbow-letters span:nth-child(10n + 2) {
+    color:orange;
+}
+rainbow-letters span:nth-child(10n + 3) {
+    color:yellow;
+}
+rainbow-letters span:nth-child(10n + 4) {
+    color:green;
+}
+rainbow-letters span:nth-child(10n + 5) {
+    color:blue;
+}
+rainbow-letters span:nth-child(10n + 6) {
+    color:indigo;
+}
+rainbow-letters span:nth-child(10n + 7) {
+    color:violet;
+}
