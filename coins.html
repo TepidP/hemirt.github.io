@@ -8,7 +8,7 @@
 <title>Coins</title>
 </head>
 <body id="maindiv">
-<h1>Coins: <sup style="font-size: xx-small;">Current price, 24H % change</sup></h1>
+<h1>Coins: <sup style="font-size: xx-small;">Current price in USD, 24H change in %</sup></h1>
 <div id="coins"></div>
 <footer>
 <a href="donolist.html">Dono List</a>
@@ -27,7 +27,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
         const element = data[i]
         if (coins.includes(element.id.toLowerCase()) || coins.includes(element.symbol.toLowerCase()) || coins.includes(element.name.toLowerCase()))
         {
-            echo += element.symbol + ': ' + element.current_price + ' USD, ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%\n'
+            echo += element.symbol + ': ' + element.current_price + ', ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%\n'
         }
     }
     document.getElementById("coins").innerHTML = echo
