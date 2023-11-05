@@ -41,9 +41,9 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
       ) {
         echo += `
           <tr>
-            <td>${element.name}</td>
-            <td>${element.current_price.toFixed(2)}</td>
-            <td>${(element.price_change_percentage_24h + Number.EPSILON).toFixed(2)}%</td>
+            <td style="text-align: center">${element.name}</td>
+            <td style="text-align: center" >${element.current_price.toFixed(2)}</td>
+            <td style="text-align: center">${(element.price_change_percentage_24h + Number.EPSILON).toFixed(2)}%</td>
           </tr>
         `;
       }
