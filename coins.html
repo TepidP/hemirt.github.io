@@ -9,7 +9,7 @@
 <title>Coins</title>
 </head>
 <body id="maindiv">
-<div id="coins"></div>
+<div id="coins" style="display: flex; justify-content: center;align-items: center;height: 70vh;" ></div>
 <footer>
 <a href="donolist.html">Dono List</a>
 <a href="/">Donate Here</a>
@@ -25,7 +25,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
   .then((response) => response.json())
   .then((data) => {
     let echo = `
-      <table>
+      <table >
         <tr>
           <th>Coins</th>
           <th>Current price (USD)</th>
