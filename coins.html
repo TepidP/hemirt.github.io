@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <link rel="stylesheet" href="stylesheet.css">
@@ -8,7 +9,6 @@
 <title>Coins</title>
 </head>
 <body id="maindiv">
-<h1>Coins: <sup style="font-size: xx-small;">Current price, 24H % change</sup></h1>
 <div id="coins"></div>
 <footer>
 <a href="donolist.html">Dono List</a>
@@ -20,18 +20,38 @@
 <script>
 const coins = ["btc", "eth", "doge", "xmr", "bnb", "matic", "ltc"]
 echo = ""
+
 fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
-.then((response) => response.json())
-.then((data) => {
-    for (const i in data) {
-        const element = data[i]
-        if (coins.includes(element.id.toLowerCase()) || coins.includes(element.symbol.toLowerCase()) || coins.includes(element.name.toLowerCase()))
-        {
-            echo += element.symbol + ': ' + element.current_price + '<sup style="font-size: xx-small;">USD</sup>, ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%\n'
-        }
+  .then((response) => response.json())
+  .then((data) => {
+    let echo = `
+      <table>
+        <tr>
+          <th>Coins</th>
+          <th>Current price (USD)</th>
+          <th>24H change (%)</th>
+        </tr>
+    `;
+
+    for (const element of data) {
+      if (
+        coins.includes(element.id.toLowerCase()) ||
+        coins.includes(element.symbol.toLowerCase()) ||
+        coins.includes(element.name.toLowerCase())
+      ) {
+        echo += `
+          <tr>
+            <td>${element.name}</td>
+            <td>${element.current_price.toFixed(2)}</td>
+            <td>${(element.price_change_percentage_24h + Number.EPSILON).toFixed(2)}%</td>
+          </tr>
+        `;
+      }
     }
-    document.getElementById("coins").innerHTML = echo
-})
+
+    echo += '</table>';
+    document.getElementById('coins').innerHTML = echo;
+  })
 </script>
 <script src="js/live2d-widget/lib/L2Dwidget.min.js" type="text/javascript"></script>
 <script>
