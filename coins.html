@@ -27,7 +27,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
         const element = data[i]
         if (coins.includes(element.id.toLowerCase()) || coins.includes(element.symbol.toLowerCase()) || coins.includes(element.name.toLowerCase()))
         {
-            echo += element.symbol + ': <span style="font-size: small;">$</span>' + element.current_price + '<sup style="font-size: xx-small;">USD</sup>, ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%\n'
+            echo += element.symbol + ': ' + element.current_price + '<sup style="font-size: xx-small;">USD</sup>, ' + Math.round((element.price_change_percentage_24h + Number.EPSILON)*100)/100 + '%\n'
         }
     }
     document.getElementById("coins").innerHTML = echo
